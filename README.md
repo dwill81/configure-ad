@@ -90,9 +90,68 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 </p>
 <p>
  
+<img width="580" alt="image" src="https://user-images.githubusercontent.com/122701786/213261134-711a4d8c-8596-4a5d-bb37-6febb47627dc.png">
+
 <p> 
  13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. Then add jane_admin to the “Domain Admins” Security Group 
 </p>
-<P>
- 
- 
+<p>
+
+<img width="356" alt="image" src="https://user-images.githubusercontent.com/122701786/213263313-3d72da15-0e03-46a6-8c52-45a0a33ad518.png">
+
+<p>
+  15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+<p>
+
+
+ <img width="396" alt="image" src="https://user-images.githubusercontent.com/122701786/213265787-a9d0d5be-a169-4953-a61a-4f1e50dd2dce.png">
+<p> 17. From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
+
+
+<img width="693" alt="image" src="https://user-images.githubusercontent.com/122701786/213269898-c039cf2e-8767-48fb-a7b1-b248870afc66.png">
+<img width="589" alt="image" src="https://user-images.githubusercontent.com/122701786/213269972-2145eada-5b8e-4973-ac69-bc65206f2f38.png">
+
+<p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart). </p>
+
+<p>
+<img src= "https://imgur.com/wMekVWq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
+<p>
+<img width="347" alt="image" src="https://user-images.githubusercontent.com/122701786/213271290-aaad5640-553a-4760-9a70-e604f2c431e0.png">
+</p>
+
+<p> 20. When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC</p>
+
+
+<p>
+<img src= "https://imgur.com/KhR7rDB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
+
+<p>
+<img src= "https://imgur.com/AP2QvUl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p> 22.Log into Client-1 as mydomain.com\jane_admin and open system properties. Click “Remote Desktop” and allow “domain users” access to remote desktop.</p>
+
+<p> 23.You can now log into Client-1 as a normal, non-administrative user. Login to DC-1 as jane_admin and
+open PowerShell_ise as an administrator</p>
+
+
+<img src= "https://imgur.com/eOOi5LN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 24.Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1).</p>
+
+<img src= "https://imgur.com/ngYiYVI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU. Note: Since this Github lab was completed on multiple days, I changed the domain name from www.mydomain.com to mydomain.com</p>
+
+<img src= "https://imgur.com/DhzSers.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<p> 26. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).</p>
