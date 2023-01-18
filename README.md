@@ -78,7 +78,7 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 
 
 <p>
-10. Restart and then log back into DC-1 as user: mydomain.com\labuser
+10. Restart and then Remote Desktop back into DC-1 as user: mydomain.com\labuser
 </p>
 <br />
 
