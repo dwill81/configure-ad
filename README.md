@@ -72,13 +72,13 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img width="594" alt="image" src="https://user-images.githubusercontent.com/122701786/213254127-7bc319b0-be36-4b0a-9d66-a8a99f2ab824.png">
 </p>
 <p>
-9. Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+Step 6: Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
 </p>
 <br />
 
 
 <p>
-10. Restart and then Remote Desktop back into DC-1 as user: mydomain.com\labuser
+Step 7: Restart and then Remote Desktop back into DC-1 as user: mydomain.com\labuser
 </p>
 <br />
 
@@ -86,38 +86,38 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img src="https://imgur.com/JNPV4Q6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and “_ADMINS” 
+Step 8: In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and “_ADMINS” 
 </p>
 <p>
  
 <img width="580" alt="image" src="https://user-images.githubusercontent.com/122701786/213261134-711a4d8c-8596-4a5d-bb37-6febb47627dc.png">
 
 <p> 
- 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. Then add jane_admin to the “Domain Admins” Security Group 
+Step 9: Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. Then add jane_admin to the “Domain Admins” Security Group 
 </p>
 <p>
 
 <img width="356" alt="image" src="https://user-images.githubusercontent.com/122701786/213263313-3d72da15-0e03-46a6-8c52-45a0a33ad518.png">
 
 <p>
-  15. Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+Step 10: Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
 <p>
 
 
  <img width="396" alt="image" src="https://user-images.githubusercontent.com/122701786/213265787-a9d0d5be-a169-4953-a61a-4f1e50dd2dce.png">
-<p> 17. From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
+Step 11: From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
 
 
 <img width="693" alt="image" src="https://user-images.githubusercontent.com/122701786/213269898-c039cf2e-8767-48fb-a7b1-b248870afc66.png">
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/122701786/213269972-2145eada-5b8e-4973-ac69-bc65206f2f38.png">
 
-<p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart). To do this you right click the start menu the go to system the rename this pc(advanced) then click change and change it from workgroup to domain.</p>
+Step 12: Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart). To do this you right click the start menu the go to system the rename this pc(advanced) then click change and change it from workgroup to domain.</p>
 
 <p>
 <img width="347" alt="image" src="https://user-images.githubusercontent.com/122701786/213271688-5759c621-6d90-4b79-9c36-c46733fb6e32.png">
 </p>
 
-<p> 20. When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC.</p>
+Step 13: When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC.</p>
 
 </p>
 <br />
@@ -126,7 +126,7 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img width="854" alt="image" src="https://user-images.githubusercontent.com/122701786/213288218-6c1eb94d-4048-4557-b2c6-cba2255d4ace.png">
 </p>
 <p>
-Step 8: Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users". 
+Step 14: Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users". 
 </p>
 <br />
 
@@ -134,7 +134,7 @@ Step 8: Use Remote Desktop in the system settings to allow domain users access f
 <img width="860" alt="image" src="https://user-images.githubusercontent.com/122701786/213292693-6948338c-38ce-428a-bc40-d39f673d71cb.png">
 </p>
 <p>
-Step 9: Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create new users with random names. This is done to simulate employees within the company.
+Step 15: Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create new users with random names. This is done to simulate employees within the company.
 </p>
 <br />
 
@@ -145,6 +145,6 @@ Step 9: Use a random account generating script to create at least 100 users for 
 
 </p>
 <p>
-Step 10: Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
+Step 16: Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
 </p>
 <br />
