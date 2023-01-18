@@ -86,8 +86,13 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img src="https://imgur.com/JNPV4Q6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+11. In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and “_ADMINS” 
 </p>
-<br />
-
-<p> 12. Create a new OU named “_ADMINS” </p>
+<p>
+ 
+<p> 
+ 13. Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. Then add jane_admin to the “Domain Admins” Security Group 
+</p>
+<P>
+ 
+ 
