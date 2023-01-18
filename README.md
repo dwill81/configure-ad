@@ -105,8 +105,9 @@ Step 10: Log out/close the Remote Desktop connection to DC-1 and log back in as 
 
 
  <img width="396" alt="image" src="https://user-images.githubusercontent.com/122701786/213265787-a9d0d5be-a169-4953-a61a-4f1e50dd2dce.png">
-Step 11: From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
-
+<p>
+ Step 11: From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
+<p>
 
 <img width="693" alt="image" src="https://user-images.githubusercontent.com/122701786/213269898-c039cf2e-8767-48fb-a7b1-b248870afc66.png">
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/122701786/213269972-2145eada-5b8e-4973-ac69-bc65206f2f38.png">
