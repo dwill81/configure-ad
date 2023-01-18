@@ -111,7 +111,7 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img width="693" alt="image" src="https://user-images.githubusercontent.com/122701786/213269898-c039cf2e-8767-48fb-a7b1-b248870afc66.png">
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/122701786/213269972-2145eada-5b8e-4973-ac69-bc65206f2f38.png">
 
-<p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart). To do this you right click the start menu the go to settings the rename this pc(advanced) then click change and change it from workgroup to domain.</p>
+<p> 19. Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart). To do this you right click the start menu the go to system the rename this pc(advanced) then click change and change it from workgroup to domain.</p>
 
 <p>
 <img width="347" alt="image" src="https://user-images.githubusercontent.com/122701786/213271688-5759c621-6d90-4b79-9c36-c46733fb6e32.png">
