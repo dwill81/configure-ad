@@ -117,36 +117,34 @@ Step 5: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
 <img width="347" alt="image" src="https://user-images.githubusercontent.com/122701786/213271688-5759c621-6d90-4b79-9c36-c46733fb6e32.png">
 </p>
 
-<p> 20. When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC</p>
+<p> 20. When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC.</p>
 
+</p>
+<br />
 
 <p>
-<img src= "https://imgur.com/KhR7rDB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="854" alt="image" src="https://user-images.githubusercontent.com/122701786/213288218-6c1eb94d-4048-4557-b2c6-cba2255d4ace.png">
 </p>
-
-<p> 21. Create a new OU named “_CLIENTS” and drag Client-1 into there</p>
+<p>
+Step 8: Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "user accounts" --> "select users that can remotely access this PC" --> click "add" and type in "domain users". 
+</p>
+<br />
 
 <p>
-<img src= "https://imgur.com/AP2QvUl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="860" alt="image" src="https://user-images.githubusercontent.com/122701786/213292693-6948338c-38ce-428a-bc40-d39f673d71cb.png">
 </p>
+<p>
+Step 9: Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create new users with random names. This is done to simulate employees within the company.
+</p>
+<br />
 
-<p> 22.Log into Client-1 as mydomain.com\jane_admin and open system properties. Click “Remote Desktop” and allow “domain users” access to remote desktop.</p>
+<p>
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/122701786/213295274-9c941a07-ae8f-49b1-a171-d0ca962bdd44.png">
+ <img width="201" alt="image" src="https://user-images.githubusercontent.com/122701786/213295334-3f13c7fe-3aee-417f-913d-2fd1788ef4b4.png">
+<img width="382" alt="image" src="https://user-images.githubusercontent.com/122701786/213295371-13c49ad4-9568-4f7f-8f0c-c8e2ad3d3c2c.png">
 
-<p> 23.You can now log into Client-1 as a normal, non-administrative user. Login to DC-1 as jane_admin and
-open PowerShell_ise as an administrator</p>
-
-
-<img src= "https://imgur.com/eOOi5LN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-<p> 24.Create a new File and paste the contents of the script into it (https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1).</p>
-
-<img src= "https://imgur.com/ngYiYVI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-<p> 25.Run the script and observe the accounts being created. Open ADUC and observe the accounts in the appropriate OU. Note: Since this Github lab was completed on multiple days, I changed the domain name from www.mydomain.com to mydomain.com</p>
-
-<img src= "https://imgur.com/DhzSers.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-<p> 26. Attempt to log into Client-1 with one of the accounts (take note of the password in the script).</p>
+</p>
+<p>
+Step 10: Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
+</p>
+<br />
