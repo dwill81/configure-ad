@@ -18,12 +18,6 @@ In this tutorial, we will be activating Active Directory within a virtual machin
 - Windows 10 (21H2)
 
 
-<h2>List of Prerequisites</h2>
-
-- Windows Powershell
-- Control Panel
-- Remote Desktop
-
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
@@ -37,7 +31,7 @@ Step 1: Log into Azure --> search "virtual machines" --> click "create azure vir
 <p>
 <img width="392" alt="image" src="https://user-images.githubusercontent.com/122701786/213237250-f0ffe0a2-761a-44d6-a32d-5a20ba8402d3.png">
 <p>
-Step 2: Go to DC-1's network settings --> select networking --> click the hyperlink next to "network interface" --> "IP Configurations" --> "ipconfig1" --> change the assignment from dynamic to static (this ensures DC-1's IP address will not change) --> check the NIC settings to make sure both VMs are on the same "Vnet". This will ensure both VMs can communicate & connect with each other later in this lab.
+Step 2: Go to DC-1's network settings --> select networking --> click the hyperlink next to "network interface" --> "IP Configurations" --> "ipconfig1" --> change the assignment from dynamic to static (this ensures DC-1's IP address will not change) --> check the NIC settings to make sure both VMs are on the same "Vnet". This will ensure both VMs can communicate & connect with each other.
 </p>
 <br />
 
@@ -135,7 +129,7 @@ Step 14: Use Remote Desktop in the system settings to allow domain users access 
 <img width="860" alt="image" src="https://user-images.githubusercontent.com/122701786/213292693-6948338c-38ce-428a-bc40-d39f673d71cb.png">
 </p>
 <p>
-Step 15: Use a random account generating script to create at least 100 users for this lab. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create new users with random names. This is done to simulate employees within the company.
+Step 15: Use a random account generating script to create a list of at least 100 users. Upload script via "Powershell ISE" (run as administrator) to Client-1. This will create new users with random names. This is done to simulate employees within the company.
 </p>
 <br />
 
@@ -146,6 +140,6 @@ Step 15: Use a random account generating script to create at least 100 users for
 
 </p>
 <p>
-Step 16: Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful. That is the conclusion of this lab.
+Step 16: Log into any newly generated user account on Client-1 VM. The login attempt with the user's name & generic password should be successful.
 </p>
 <br />
