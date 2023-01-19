@@ -40,7 +40,7 @@ Step 2: Go to DC-1's network settings --> select networking --> click the hyperl
 <img width="774" alt="image" src="https://user-images.githubusercontent.com/122701786/213237857-4bea45d8-d425-4f09-89c2-dfe3c8548c1c.png">
 </p>
 <p>
-Step 3: Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping). The ping is expected to fail or "timeout". Then Remote Desktop into DC-1 via windows firwall security settings --> Advanced settings --> inbound/outbound rules to allow "IPV4 permissions" on 
+Step 3: Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping). The ping is expected to fail or "timeout". Then Remote Desktop into DC-1 via windows firewall security settings --> Advanced settings --> inbound/outbound rules to allow "ICMPV4 permissions" on 
  DC-1's Firewall. This will open the firewall for connectivity after DC-1 is converted into a domain.
 </p>
 <br />
@@ -100,7 +100,7 @@ Step 10: Log out/close the Remote Desktop connection to DC-1 and log back in as 
 
  <img width="396" alt="image" src="https://user-images.githubusercontent.com/122701786/213265787-a9d0d5be-a169-4953-a61a-4f1e50dd2dce.png">
 <p>
- Step 11: From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the azure portal.</p>
+ Step 11: From the Azure Portal, set Client-1’s DNS settings to DC-1’s Private IP address then restart Client-1 from the Azure Portal.</p>
 <p>
 
 <img width="693" alt="image" src="https://user-images.githubusercontent.com/122701786/213269898-c039cf2e-8767-48fb-a7b1-b248870afc66.png">
